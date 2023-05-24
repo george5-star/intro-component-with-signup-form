@@ -45,4 +45,4 @@ Going forward, i will dive more in form validation.
 
 ## Author
 
-- Frontend Mentor - [@george5-star](https://www.frontendmentor.io/profile/george5-star)
+- George Asiedu - [@george5-star](https://www.frontendmentor.io/profile/george5-star)
