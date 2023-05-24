@@ -1,0 +1,253 @@
+:root {
+  /* colors */
+  --clr-primary-1: hsl(0 100% 74%);
+  --clr-primary-2: hsl(154 59% 51%);
+
+  --clr-accent: hsl(248 32% 49%);
+
+  --clr-neutral-1: hsl(249 10% 26%);
+  --clr-neutral-2: hsl(246 25% 77%);
+  --clr-neutral-3: hsl(0 0% 100%);
+
+  --bg-clr: hsl(0 100% 74% / 95%);
+  --btn-hover-clr: hsl(154 59% 71%);
+
+  /* typography */
+  --ff-primary: "Poppins", sans-serif;
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fz-smaller: 12px;
+  --fz-small: 14px;
+  --fz-normal: 16px;
+  --fz-large: 28px;
+  --fz-larger: 40px;
+
+  --bdrs-1: 0.9rem;
+  --bdrs-2: 0.45rem;
+
+  --p-block-100: 1rem;
+  --p-block-150: 1.5rem;
+  --p-block-200: 2rem;
+
+  --p-inline-100: 1rem;
+  --p-inline-200: 2rem;
+
+  --mt-size: -50px;
+
+  --size-50: 0.5rem;
+  --size-100: 1rem;
+  --size-200: 2rem;
+  --size-300: 3rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: var(--fz-normal);
+  background: var(--bg-clr) url(../images/bg-intro-desktop.png) no-repeat center;
+  background-size: cover;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  color: var(--clr-neutral-3);
+  font-family: var(--ff-primary);
+}
+
+footer {
+  display: none;
+}
+
+.wrapper {
+  width: 80vw;
+  max-width: 100rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-message-container,
+.form-container {
+  width: 48%;
+}
+
+.hero-message-container {
+  display: grid;
+  place-items: center;
+}
+
+.main-title {
+  font-size: var(--fz-larger);
+  margin-block-start: var(--mt-size);
+  line-height: 1.1;
+}
+
+.description {
+  width: 90%;
+  font-size: var(--fz-small);
+  line-height: 1.5;
+  margin-top: var(--size-300);
+}
+
+.form-wrapper {
+  background-color: var(--clr-neutral-3);
+  width: 100%;
+  border-radius: var(--bdrs-1);
+  padding-block: var(--p-block-100) var(--p-block-200);
+}
+
+.form-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 2px rgb(0 0 0 / 20%);
+}
+
+.form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form__group {
+  margin-block: var(--size-200);
+}
+
+.cta-message {
+  background-color: var(--clr-accent);
+  width: 100%;
+  text-align: center;
+  padding: var(--p-block-150);
+  border-radius: var(--bdrs-1);
+  margin-block: var(--size-200);
+  box-shadow: 0 8px 2px rgb(0 0 0 / 20%);
+}
+
+.cta-message span {
+  font-weight: var(--fw-bold);
+}
+
+.form__input {
+  width: 100%;
+  font-weight: var(--fw-bold);
+  border-radius: var(--bdrs-2);
+  border: 1px solid var(--clr-neutral-2);
+  padding-block: var(--p-block-150);
+  padding-inline: var(--p-inline-200);
+}
+
+.form__input-group {
+  position: relative;
+  width: 100%;
+}
+
+.error-icon {
+  display: none;
+  position: absolute;
+  inset-inline-end: 2rem;
+  width: 2rem;
+  inset-block-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form--error-message {
+  display: none;
+  color: var(--clr-primary-1);
+  text-align: right;
+  font-size: var(--fz-smaller);
+  font-style: italic;
+  font-weight: var(--fw-bold);
+  margin-top: var(--size-50);
+}
+
+.form__button {
+  background-color: var(--clr-primary-2);
+  width: 100%;
+  padding-block: var(--p-block-150);
+  color: var(--clr-neutral-3);
+  border: none;
+  border-radius: var(--bdrs-2);
+  box-shadow: inset 0 -5px rgb(0 0 0 / 20%);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+}
+
+.form__button:hover,
+.form__button:focus {
+  cursor: pointer;
+  background-color: var(--btn-hover-clr);
+}
+
+.terms-and-conditions {
+  color: var(--clr-neutral-2);
+  font-size: var(--fz-smaller);
+  margin-block: var(--size-100);
+}
+
+.terms-and-conditions span {
+  color: var(--clr-primary-1);
+}
+
+.active {
+  display: block;
+}
+
+@media (max-width: 40em) {
+  body {
+    background: var(--bg-clr) url(../images/bg-intro-mobile.png) no-repeat
+      center;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--p-block-200) 0;
+  }
+
+  .hero-message-container,
+  .form-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-message-container {
+    margin-top: 50px;
+  }
+
+  .main-title {
+    font-size: var(--fz-large);
+  }
+
+  .description {
+    margin: 10px auto;
+  }
+
+  .cta-message,
+  .form__input {
+    padding-block: var(--p-block-150);
+  }
+
+  .form__button {
+    padding-block: var(--p-block-150);
+  }
+
+  .terms-and-conditions {
+    font-size: 10px;
+    width: 70%;
+    margin: 10px auto;
+  }
+}
